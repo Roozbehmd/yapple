@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&family=Nunito:wght@600;800;900&display=swap");
+
+:root {
+  --bg: #17142a;
+  --bg-deep: #0d0b1c;
+  --card: #241f40;
+  --ink: #fdf6e3;
+  --muted: #b9b2d6;
+  --pink: #ff4fa3;
+  --lime: #a8e10c;
+  --lcd: #c4cfa1;
+  --lcd-ink: #1f2a17;
+  --amber: #ffd23f;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg-deep); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: radial-gradient(1200px 700px at 50% -10%, #3a2a7a 0%, var(--bg) 55%, var(--bg-deep) 100%);
+  font: 600 18px/1.6 "Nunito", -apple-system, system-ui, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 16px 56px;
+}
+
+header { text-align: center; margin-bottom: 28px; }
+
+.icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 28px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+h1, h2, .pixel, nav a {
+  font-family: "Silkscreen", ui-monospace, monospace;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+h1 { font-size: clamp(36px, 9vw, 56px); line-height: 1.05; margin: 18px 0 6px; }
+
+.sub {
+  display: inline-block;
+  font-family: "Silkscreen", ui-monospace, monospace;
+  color: var(--lcd-ink);
+  background: var(--lcd);
+  padding: 6px 14px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 3px #11140c;
+  font-size: 15px;
+}
+
+nav { margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(#ffffff22, #ffffff0d);
+  box-shadow: inset 0 0 0 2px #ffffff33;
+  font-size: 15px;
+}
+
+nav a:hover { background: linear-gradient(#ffffff33, #ffffff1a); }
+
+h2 {
+  font-size: 22px;
+  margin: 36px 0 10px;
+  color: var(--amber);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 #ffffff14;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.lead { font-size: 19px; }
+
+strong { color: #fff; font-weight: 900; }
+
+.callers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.caller {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.caller b { display: block; font-family: "Silkscreen", ui-monospace, monospace; font-weight: 400; color: var(--lime); }
+
+.note { color: var(--muted); font-size: 16px; }
+
+.colours { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+
+.colours span {
+  width: 34px;
+  height: 22px;
+  border-radius: 8px;
+  box-shadow: inset 0 -4px 0 #00000030, inset 0 2px 0 #ffffff60;
+}
+
+a { color: var(--pink); }
+
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+.foot { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
+
+.brand {
+  margin-top: 18px;
+  font-family: "Silkscreen", ui-monospace, monospace;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  font-size: 15px;
+}
+.brand + h1 { margin-top: 4px; }
+
+.tagline { margin: 14px 0 0; font-size: 20px; font-weight: 800; }
+
+h3 {
+  font-family: "Silkscreen", ui-monospace, monospace;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+/* A word as the phone's screen would show it. */
+.lcd {
+  display: inline-block;
+  font-family: "Silkscreen", ui-monospace, monospace;
+  font-size: 0.85em;
+  color: var(--lcd-ink);
+  background: var(--lcd);
+  padding: 1px 8px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 2px #11140c;
+  white-space: nowrap;
+}
+
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.feature {
+  position: relative;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 18px 18px 18px 18px;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 #ffffff14;
+}
+.feature p { margin: 0 0 10px; }
+.feature p:last-child { margin-bottom: 0; }
+
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+  font-family: "Silkscreen", ui-monospace, monospace;
+  color: #1d1336;
+  background: linear-gradient(#ffe27a, var(--amber));
+  box-shadow: inset 0 -3px 0 #00000030;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+
+.devices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.device { font-size: 16px; line-height: 1.5; }
+.device h3 { color: var(--lime); }
+em { font-style: normal; color: var(--amber); }
+
+@media (max-width: 640px) {
+  .features, .devices { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .card { padding: 16px 16px; }
+}
